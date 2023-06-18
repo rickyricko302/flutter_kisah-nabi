@@ -32,10 +32,4 @@ class DetailStoryController extends GetxController {
       }
     });
   }
-
-  @override
-  void onClose() async {
-    print("stop");
-    super.onClose();
-  }
 }

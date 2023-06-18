@@ -5,7 +5,6 @@ import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:kisah_nabi/app/data/assets_color.dart';
 import 'package:kisah_nabi/app/modules/home/views/widgets/item_home.dart';
-import 'package:kisah_nabi/app/routes/app_pages.dart';
 
 import '../controllers/home_controller.dart';
 

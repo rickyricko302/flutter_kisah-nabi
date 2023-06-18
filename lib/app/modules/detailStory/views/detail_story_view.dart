@@ -1,6 +1,5 @@
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import 'package:get/get.dart';
@@ -184,13 +183,14 @@ class DetailStoryView extends GetView<DetailStoryController> {
                                             fontSize: 18.sp),
                                       ),
                                       Container(
-                                        margin: EdgeInsets.only(right: 20),
+                                        margin:
+                                            const EdgeInsets.only(right: 20),
                                         child: GestureDetector(
                                             onTap: () {
                                               controller.isFontShow.value =
                                                   false;
                                             },
-                                            child: Icon(
+                                            child: const Icon(
                                               Icons.close,
                                               color: Colors.grey,
                                             )),
@@ -218,28 +218,5 @@ class DetailStoryView extends GetView<DetailStoryController> {
             )),
       ),
     );
-  }
-}
-
-class CustomBoxShadow extends BoxShadow {
-  final BlurStyle blurStyle;
-
-  const CustomBoxShadow({
-    Color color = const Color(0xFF000000),
-    Offset offset = Offset.zero,
-    double blurRadius = 0.0,
-    this.blurStyle = BlurStyle.normal,
-  }) : super(color: color, offset: offset, blurRadius: blurRadius);
-
-  @override
-  Paint toPaint() {
-    final Paint result = Paint()
-      ..color = color
-      ..maskFilter = MaskFilter.blur(this.blurStyle, blurSigma);
-    assert(() {
-      if (debugDisableShadows) result.maskFilter = null;
-      return true;
-    }());
-    return result;
   }
 }

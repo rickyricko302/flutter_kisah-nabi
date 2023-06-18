@@ -1,4 +1,3 @@
-import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
@@ -61,7 +60,7 @@ class ItemHome extends StatelessWidget {
                 height: 10,
               ),
               Padding(
-                padding: EdgeInsets.only(left: 12),
+                padding: const EdgeInsets.only(left: 12),
                 child: Chip(
                     label: Text(
                         "Nabi ke ${index <= 13 ? (index + 1) : (index == 14 || index == 15 || index == 16) ? 14 : index - 2}",

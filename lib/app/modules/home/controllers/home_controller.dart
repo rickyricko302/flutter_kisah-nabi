@@ -3,7 +3,6 @@ import 'dart:convert';
 import 'package:drop_down_list/drop_down_list.dart';
 import 'package:drop_down_list/model/selected_list_item.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -81,7 +80,7 @@ class HomeController extends GetxController {
           );
         },
         selectedItems: (List<dynamic> selectedList) async {
-          await Future.delayed(Duration(seconds: 1), () {
+          await Future.delayed(const Duration(seconds: 1), () {
             index.value = model
                 .indexWhere((element) => element.name == selectedList[0].name);
             pageController.animateToPage(
@@ -97,7 +96,7 @@ class HomeController extends GetxController {
   showBottomSheetHome(context) {
     showModalBottomSheet(
         isScrollControlled: true,
-        shape: RoundedRectangleBorder(
+        shape: const RoundedRectangleBorder(
             borderRadius: BorderRadius.only(
                 topLeft: Radius.circular(20), topRight: Radius.circular(20))),
         context: context,
@@ -142,7 +141,7 @@ class HomeController extends GetxController {
                     Container(
                       width: 70,
                       height: 70,
-                      decoration: BoxDecoration(
+                      decoration: const BoxDecoration(
                           shape: BoxShape.circle,
                           image: DecorationImage(
                               image: AssetImage("assets/ic_launcher.png"))),
