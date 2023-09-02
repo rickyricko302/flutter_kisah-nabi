@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "140485412973",
+    "project_id": "kisah-nabi-2c97d",
+    "storage_bucket": "kisah-nabi-2c97d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:140485412973:android:d1321bebe155a82f4d1764",
+        "android_client_info": {
+          "package_name": "com.example.kisah_nabi"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "140485412973-p8l6relocoupl3ckm2qgooh71qcdmu6r.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyATCo1DSHIG4uZcWj_ru13UNE1MzKs4b7I"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "140485412973-p8l6relocoupl3ckm2qgooh71qcdmu6r.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "140485412973-25pfbe8ehcirknqo4gs0ve88f9kapjhg.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.kisahNabi"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

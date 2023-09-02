@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:flutter_svg/svg.dart';
 
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:kisah_nabi/app/data/assets_color.dart';
 import 'package:kisah_nabi/app/modules/home/views/widgets/item_home.dart';
+import 'package:kisah_nabi/app/routes/app_pages.dart';
 
 import '../controllers/home_controller.dart';
 
@@ -20,12 +22,11 @@ class HomeView extends GetView<HomeController> {
           child: Column(
             children: [
               const SizedBox(
-                height: 20,
+                height: 12,
               ),
               Padding(
                 padding: const EdgeInsets.only(left: 12, right: 12),
                 child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     IconButton(
                       onPressed: () {
@@ -36,17 +37,27 @@ class HomeView extends GetView<HomeController> {
                         color: Colors.blueGrey,
                       ),
                     ),
-                    Column(
-                      children: [
-                        Text(
-                          "Kisah Nabi",
-                          style: TextStyle(
-                              color: AssetsColor.primary,
-                              fontSize: 24.sp,
-                              fontWeight: FontWeight.bold),
-                        ),
-                      ],
+                    const SizedBox(
+                      width: 12,
                     ),
+                    Expanded(
+                      child: Text(
+                        "Kisah Nabi",
+                        style: TextStyle(
+                            color: AssetsColor.primary,
+                            fontSize: 23.sp,
+                            fontWeight: FontWeight.bold),
+                      ),
+                    ),
+                    IconButton(
+                        onPressed: () {
+                          Get.toNamed(Routes.YOUTUBE);
+                        },
+                        icon: SvgPicture.asset(
+                          'assets/ic_youtube.svg',
+                          colorFilter: ColorFilter.mode(
+                              AssetsColor.primary, BlendMode.srcIn),
+                        )),
                     IconButton(
                       onPressed: () {
                         controller.showSearchable(context);
@@ -59,13 +70,13 @@ class HomeView extends GetView<HomeController> {
                   ],
                 ),
               ),
-              Obx(() => Text(
-                    "${controller.index.value <= 13 ? (controller.index.value + 1) : (controller.index.value == 14 || controller.index.value == 15 || controller.index.value == 16) ? 14 : controller.index.value - 2}/${25}",
-                    style: TextStyle(
-                        color: Colors.grey,
-                        fontSize: 16.sp,
-                        fontWeight: FontWeight.normal),
-                  )),
+              // Obx(() => Text(
+              //       "${controller.index.value <= 13 ? (controller.index.value + 1) : (controller.index.value == 14 || controller.index.value == 15 || controller.index.value == 16) ? 14 : controller.index.value - 2}/${25}",
+              //       style: TextStyle(
+              //           color: Colors.grey,
+              //           fontSize: 16.sp,
+              //           fontWeight: FontWeight.normal),
+              //     )),
               const SizedBox(
                 height: 30,
               ),
